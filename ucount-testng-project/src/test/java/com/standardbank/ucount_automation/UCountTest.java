@@ -40,35 +40,34 @@ public class UCountTest {
 
         driver.get("https://www.standardbank.co.za");
  
-        // 1. Wait and click UCount Rewards
+        // This Waits and clicks UCount Rewards
 
         WebElement ucountLink = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("UCount Rewards")));
 
         ucountLink.click();
  
-        // 2. Wait and click "JOIN UCOUNT / CREATE PROFILE"
+        // This waits and clicks "JOIN UCOUNT / CREATE PROFILE"
 
         WebElement joinLink = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("JOIN UCOUNT / CREATE PROFILE")));
 
         joinLink.click();
  
-        // 3. Wait for the ID input and enter data
+        // This Waits for user to input ID data
 
-        WebElement idInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idnumber")));
+        WebElement idInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("id-number")));
 
         idInput.sendKeys("123qwerty");
  
-        // 4. Wait for and click the Continue button
+        // This waits and clicks the Continue button
 
         WebElement continueBtn = wait.until(ExpectedConditions.elementToBeClickable(
 
                 By.xpath("//button[contains(text(), 'Continue')]")));
 
         continueBtn.click();
- 
-        // Optionally: verify next step or error message
+  
 
-        System.out.println("✅ Form submitted (check response manually or assert expected result).");
+        System.out.println("Form submitted or something");
 
     }
  
@@ -84,7 +83,7 @@ public class UCountTest {
 
     }
  
-    // ✅ Added main() method for direct execution
+    // Added main method for direct execution
 
     public static void main(String[] args) throws Exception {
 
